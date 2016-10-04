@@ -20,10 +20,7 @@ public class FPMenu {
        System.out.println("La opcion elegida es" + menu);
        menu();
        calculaAreas();
-       int a, b, pi, r;
-       a=solicitarDato("A");
-       b=solicitarDato("B");
-       r=solicitarDato("Radio");
+       
        
     }
     public static int menu (){
@@ -46,7 +43,7 @@ public class FPMenu {
         switch (op){
             case 1:
                 area=areaCuadrado();
-                break;
+               return area;
             case 2:
                 area=areaCirculo();
                 break;
@@ -59,20 +56,20 @@ public class FPMenu {
                 }
         return area;
         }
-    private static int solicitarDato(String d){
-        int miDato;
-        System.out.println("Introduce el dato: " + d);
-        Scanner teclado= new Scanner(System.in);
-        miDato=teclado.nextInt();
-        return miDato;
-        }
-    private static float areaCuadrado() {
-        int a = 0, b = 0;
-        int areaCuadrado= a*b;
-      
-        return areaCuadrado;
-
-    }
+    public static double solicitarDatos(String tipo){
+        double dato;
+        Scanner entrada = new Scanner(System.in);
+        System.out.print("Introduzca el valor de " + tipo + " : ");
+        dato = entrada.nextDouble();
+        return dato;
+}
+    public static float areaCuadrado(){
+        float area;
+        double a;
+        a = solicitarDatos("un lado");
+        area = (float) Math.pow(a, 2); 
+        return area;
+}
     public static double areaTriangulo(int a, int b){
         int areaTriangulo= (a*b)/2;
         return areaTriangulo;
@@ -85,7 +82,6 @@ public class FPMenu {
    }
    public static void MensajeSalida(){
        System.out.println("Error");
-       
    }
 
     
