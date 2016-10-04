@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package fp.menu;
-import static fp.menu.FPMenu.area;
 import java.util.*;
 /**
  *
@@ -60,21 +59,18 @@ public class FPMenu {
                 }
         return area;
         }
-    public static int solicitarDato(String d){
+    private static int solicitarDato(String d){
         int miDato;
         System.out.println("Introduce el dato: " + d);
         Scanner teclado= new Scanner(System.in);
         miDato=teclado.nextInt();
         return miDato;
         }
-    public static double area(int a, int b){
-        int area
-        areaCuadrado= a*b;
-        areaTriangulo= (a*b)/2;
+    private static float areaCuadrado() {
+        int a = 0, b = 0;
+        int areaCuadrado= a*b;
       
-       
-        
-        return area;
+        return areaCuadrado;
 
     }
     public static double areaTriangulo(int a, int b){
@@ -91,4 +87,7 @@ public class FPMenu {
        System.out.println("Error");
        
    }
+
+    
+       
     }
