@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package fp.menu;
+import static fp.menu.FPMenu.area;
 import java.util.*;
 /**
  *
@@ -20,6 +21,11 @@ public class FPMenu {
        System.out.println("La opcion elegida es" + menu);
        menu();
        calculaAreas();
+       int a, b, pi, r;
+       a=solicitarDato("A");
+       b=solicitarDato("B");
+       r=solicitarDato("Radio");
+       
     }
     public static int menu (){
         int opcion;
@@ -54,7 +60,35 @@ public class FPMenu {
                 }
         return area;
         }
-    public static area(){
+    public static int solicitarDato(String d){
+        int miDato;
+        System.out.println("Introduce el dato: " + d);
+        Scanner teclado= new Scanner(System.in);
+        miDato=teclado.nextInt();
+        return miDato;
+        }
+    public static double area(int a, int b){
+        int area
+        areaCuadrado= a*b;
+        areaTriangulo= (a*b)/2;
+      
+       
+        
+        return area;
+
+    }
+    public static double areaTriangulo(int a, int b){
+        int areaTriangulo= (a*b)/2;
+        return areaTriangulo;
         
     }
+   public static double areaCirculo(int r, int p){
+        double pi = 3.1416;
+       int areaCirculo= (int) (pi*Math.pow(r,2));
+       return areaCirculo;
+   }
+   public static void MensajeSalida(){
+       System.out.println("Error");
+       
+   }
     }
